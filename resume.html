@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	    <title>Aleksa Tešić</title>
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style type="text/css">
+        @font-face {
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 300;
+            src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+        }
+
+        body {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background: #444444;
+            letter-spacing: .3px;
+            font-size: 12px;
+        }
+
+        .page {
+            background: white;
+            width: 21cm;
+            /*min-height: 792px;*/
+            display: block;
+            margin: 0 auto;
+
+            padding: 20px 28px 30px 28px;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0); }
+            .page:after {
+                content: "";
+                display: table;
+                clear: both;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: .5px;
+        }
+
+        h3 {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            letter-spacing: .4px; }
+            h3.bold {
+                font-weight: 700;
+        }
+
+        h4 {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 14px; }
+            h4.bold {
+                font-weight: 700;
+        }
+
+        h5 {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 13px; }
+            h5.italic {
+                font-style: italic;
+        }
+
+        h6 {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit; }
+            a:hover {
+                color: #2895F1; }
+            a .fa-external-link {
+                font-size: 10px;
+                vertical-align: text-top;
+        }
+
+        em {
+            color: #777;
+        }
+
+        ul {
+            margin: 0 0 0;
+            -webkit-padding-start: 25px; }
+            ul li {
+                padding-left: 10px; }
+            ul.minimal {
+                list-style: none;
+                padding: 0; }
+            ul.minimal li {
+                padding-left: 0; }
+            ul.two-column {
+                -webkit-column-count: 2;
+                -webkit-column-gap: 28px;
+                -moz-column-count: 2;
+                 column-count: 2;
+                -moz-column-gap: 28px;
+                 column-gap: 28px; }
+            ul.two-column li {
+                 padding-left: 0;
+        }
+
+        .longline {
+            width: 90%;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 8px;
+            border-top: 1px solid rgba(0, 0, 0, 0.65);
+        }
+
+        .shortline {
+            width: 190px;
+            margin: auto;
+            margin-top: 3px;
+            margin-bottom: 4px;
+            border-top: 1px solid rgba(0, 0, 0, 0.45);
+        }
+
+        p {
+            margin: 0 0 8px 0;
+            padding: 0 0 0 1.8em;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 18px;
+        }
+
+        .about-row {
+            text-align: center;
+            margin-bottom: 5px; }
+            .about-row .fa {
+                font-size: 14px;
+                width: 12px;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-align: center;
+                vertical-align: middle; }
+            .about-row .fa.fa-map-marker {
+                font-size: 16px; }
+            .about-row .fa.fa-mobile {
+                font-size: 18px; }
+            .about-row .fa.fa-envelope-o {
+                font-size: 12px; }
+            .about-row .fa.fa-desktop {
+                font-size: 11px; }
+            .about-row .fa.fa-external-link {
+                width: auto;
+                font-size: inherit;
+                vertical-align: text-top; }
+          .about-row .info-text {
+                display: inline-block;
+                vertical-align: middle;
+        }
+
+        .skill-row {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .skill-group {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 7px;
+        }
+
+        .content {
+            width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            overflow: auto;
+        }
+
+        .content .info {
+            display: inline-block;
+            float: left;
+        }
+
+        .content .date {
+            display: inline-block;
+            float: right;
+            text-align: right;
+        }
+        </style>
+	</head>
+	<body>
+		<main class="page">
+
+			<header class="container">
+			    <h1>Aleksa Tešić</h1>
+                <div class="about-row">
+                    <i class="fa fa-map-marker"></i>
+                    <div class="info-text">Belgrade, Serbia</div>
+
+                    <i class="fa fa-envelope-o"></i>
+                    <div class="info-text">aleksatesicteske@gmail.com</div>
+
+                    <i class="fa fa-mobile"></i>
+                    <div class="info-text">(+381) 60 424 37 69</div>
+
+                    <i class="fa fa-github"></i>
+                    <div class="info-text">github.com/imafikus</div>
+                </div>
+			</header>
+
+			<div class="container">
+				<h3 class="title">Skills</h3>
+				<div class="longline"></div>
+
+				<div class="skill-row">
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>High Level</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>Python</li>
+						</ul>
+					</div>
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>Systems &amp; Low Level</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>C / C++</li>
+							<li>x86, Z80</li>
+							<li>Computer Architecture</li>
+						</ul>
+					</div>
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>Artificial Intelligence</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>Computer Vision, OpenCV</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="skill-row">
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>Collaboration</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>Git</li>
+							<li>LaTeX</li>
+						</ul>
+					</div>
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>Web Development</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>HTML, CSS</li>
+							<li>Javascript</li>
+							<li>Bootstrap</li>
+							<li>Django</li>
+						</ul>
+					</div>
+
+					<div class="skill-group">
+						<div class="subtitle">
+							<h4>Spoken Languages</h4>
+							<div class="shortline"></div>
+						</div>
+						<ul class="minimal">
+							<li>Serbian <em>(Native speaker)</em></li>
+							<li>English <em>(Good)</em></li>
+							<li>German <em>(Basic)</em></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+            <div class="container">
+                <h3 class="title">Education</h3>
+                <div class="longline"></div>
+
+                <div class="content">
+                    <div class="info">
+                        <b>University of Belgrade, Faculty of Mathematics</b>
+                        <p>Department of Computer Science - Informatics Bsc, GPA: 8.75/10 </p>
+                    </div>
+                    <div class="date">
+                        2017 – present
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h3 class="title">Publications</h3>
+                <div class="longline"></div>
+
+                <div class="content">
+                    <b>"Cloudiness estimation for video meteor observations"</b>: Nikolić, V; Schröder, L; Tešić, A; IMC 2017 proceedings
+                </div>
+                <div class="content">
+                    <b>"Estimation of Cloud Coverage from Night-Time Images"</b>: Tešić, A; ISP Conference 2016 proceedings
+                </div>
+            </div>
+
+			<div class="container">
+				<h3 class="title">Projects</h3>
+				<div class="longline"></div>
+
+                <div class="content">
+                    <div class="info">
+                        <b>Bob CPU (Collaborators:Adžemović M; Majstorović V)</b> (Logisim, C, Computer Architecture)
+                        <p>Simulation of an 8bit processor with custom assembly language. Hobby project.</p>
+                    </div>
+                    <div class="date">
+                        2018 – present
+                    </div>
+
+                    <div class="info">
+                        <b>LMG - GUI</b> (Python, Meteor astronomy)
+                        <p>App which computes LMG for visual meteor observations. Made for Petnica Meteor Group.</p>
+                    </div>
+                    <div class="date">
+                        2017
+                    </div>
+
+                    <div class="info">
+                        <b>GUI for All Sky Cloudiness Estimator</b> (Python, Tensorflow, OpenCV)
+                        <p>A software package that estimates cloudiness in All Sky images.<br/>
+                        Presented at International Meteor Conference 2017.<br/>
+                        Awarded 3rd place on IEEESTEC - 10th International Students Projects Conference.</p>
+                    </div>
+                    <div class="date">
+                        2017
+                    </div>
+
+                    <div class="info">
+                        <b>Linear Regression Library</b> (C++, Statistics)
+                        <p>Simple library for linear regresion. Hobby Project.</p>
+                    </div>
+                    <div class="date">
+                        2017
+                    </div>
+
+                    <div class="info">
+                        <b>Prediction of sequential movements in 2D spaces</b> (C++, Statistics)
+                        <p>Program which predicts movements of an object inside of a labyrinth using Hidden Markov Models.<br/> Presented on IS Petnica 2017 "Korak u nauku" Conference.</p>
+                    </div>
+                    <div class="date">
+                        2017
+                    </div>
+                    
+                    <div class="info">
+                        <b>Site for Non-Profit Organization(Collaborators:Adžemović M)</b> (HTML5, CSS3, Javascript, PHP)
+                        <p>Fully responsive site for Non-Profit Organization that fights against cancer.</p>
+                    </div>
+                    <div class="date">
+                            2017
+                    </div>
+
+                    <div class="info">
+                        <b>Estimation of Cloud Coverage from Night-Time Images</b> (C++, OpenCV, Statistics)
+                        <p>Program for determining cloud coverage based of pixel distributions.<br/> Presented on IS Petnica 2016 "Korak u nauku" Conference.</p>
+                    </div>
+                    <div class="date">
+                        2016
+                    </div>
+
+                    <div class="info">
+                        <b>Site for "Polyglot Language School" in Kraljevo (Collaborators:Adžemović M.)</b> (HTML5, CSS3, Javascript)
+                        <p>Responsive site developed using heavily modified open-source templates.</p>
+                    </div>
+                    <div class="date">
+                        2016
+                    </div>
+                </div>
+			</div>
+
+            <div class="container">
+                <h3 class="title">Other</h3>
+                <div class="longline"></div>
+
+                <div class="content">
+                    <div class="info">
+                        <b>Junior Associate in Petnica</b>
+                        <p>Junior Associate on Computer Science and STEM departments in IS Petnica.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </div>
+                    <div class="date">
+                        2017 - present
+                    </div>
+
+                    <div class="info">
+                        
+                            <b>Petnica Meteor Group</b>
+                            <p>Member of meteor astronomy group in Petnica.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </div>
+                    <div class="date">
+                        2017
+                    </div>
+
+                    <div class="info">
+                        <b>IS Petnica</b>
+                        <p>Attended lectures on Computer Science department.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </div>
+                    <div class="date">
+                        2015 - 2017
+                    </div>
+
+                    <div class="info">
+                            <b>International Meteor Conference 2017</b>
+                            <p>Member of the local organizing committee.</p>
+                    </div>
+                    <div class="date">
+                        2016 - present
+                    </div>
+                </div>
+            </div>
+
+		</main>
+	</body>
+</html>
