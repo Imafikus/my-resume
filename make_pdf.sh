@@ -1,1 +1,1 @@
-wkhtmltopdf /home/imafikus/my-resume/resume.html /home/imafikus/my-resume/resume.pdf 
+wkhtmltopdf /Users/pentadev/Imafikus/my-resume/resume.html /Users/pentadev/Imafikus/my-resume/resume.pdf
