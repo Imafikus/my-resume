@@ -1,484 +1,584 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	    <title>Aleksa Tešić</title>
-	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <style type="text/css">
-        @font-face {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 300;
-            src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 400;
-            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 700;
-            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimal-ui"
+    />
+    <title>Aleksa Tešić</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      @font-face {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: local("Josefin Sans Light"), local("JosefinSans-Light"),
+          url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Josefin Sans Bold"), local("JosefinSans-Bold"),
+          url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        src: local("Lato Light"), local("Lato-Light"),
+          url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Lato Regular"), local("Lato-Regular"),
+          url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Lato Bold"), local("Lato-Bold"),
+          url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: italic;
+        font-weight: 300;
+        src: local("Lato Light Italic"), local("Lato-LightItalic"),
+          url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: italic;
+        font-weight: 400;
+        src: local("Lato Italic"), local("Lato-Italic"),
+          url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: italic;
+        font-weight: 700;
+        src: local("Lato Bold Italic"), local("Lato-BoldItalic"),
+          url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf)
+            format("truetype");
+      }
 
-        body {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            background: #444444;
-            letter-spacing: .3px;
-            font-size: 12px;
-        }
+      body {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        background: #444444;
+        letter-spacing: 0.3px;
+        font-size: 12px;
+      }
 
-        .page {
-            background: white;
-            width: 21cm;
-            /*min-height: 792px;*/
-            display: block;
-            margin: 0 auto;
+      .page {
+        background: white;
+        width: 21cm;
+        /*min-height: 792px;*/
+        display: block;
+        margin: 0 auto;
 
-            padding: 20px 28px 30px 28px;
-            box-shadow: 0 1px 10px rgba(0, 0, 0, 0); }
-            .page:after {
-                content: "";
-                display: table;
-                clear: both;
-        }
+        padding: 20px 28px 30px 28px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
+      }
+      .page:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-        h1, h2, h3, h4, h5, h6 {
-            text-transform: uppercase;
-            margin: 0;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-transform: uppercase;
+        margin: 0;
+      }
 
-        h1 {
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: 700;
-            font-size: 30px;
-            letter-spacing: 1px;
-        }
+      h1 {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 1px;
+      }
 
-        h2 {
-            font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            letter-spacing: .5px;
-        }
+      h2 {
+        font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
 
-        h3 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 15px;
-            letter-spacing: .4px; }
-            h3.bold {
-                font-weight: 700;
-        }
+      h3 {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 0.4px;
+      }
+      h3.bold {
+        font-weight: 700;
+      }
 
-        h4 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 14px; }
-            h4.bold {
-                font-weight: 700;
-        }
+      h4 {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      h4.bold {
+        font-weight: 700;
+      }
 
-        h5 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 13px; }
-            h5.italic {
-                font-style: italic;
-        }
+      h5 {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+      }
+      h5.italic {
+        font-style: italic;
+      }
 
-        h6 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            font-size: 12px;
-        }
+      h6 {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+      }
 
-        a {
-            color: inherit;
-            text-decoration: inherit; }
-            a:hover {
-                color: #2895F1; }
-            a .fa-external-link {
-                font-size: 10px;
-                vertical-align: text-top;
-        }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a:hover {
+        color: #2895f1;
+      }
+      a .fa-external-link {
+        font-size: 10px;
+        vertical-align: text-top;
+      }
 
-        em {
-            color: #777;
-        }
+      em {
+        color: #777;
+      }
 
-        ul {
-            margin: 0 0 0;
-            -webkit-padding-start: 25px; }
-            ul li {
-                padding-left: 10px; }
-            ul.minimal {
-                list-style: none;
-                padding: 0; }
-            ul.minimal li {
-                padding-left: 0; }
-            ul.two-column {
-                -webkit-column-count: 2;
-                -webkit-column-gap: 28px;
-                -moz-column-count: 2;
-                 column-count: 2;
-                -moz-column-gap: 28px;
-                 column-gap: 28px; }
-            ul.two-column li {
-                 padding-left: 0;
-        }
+      ul {
+        margin: 0 0 0;
+        -webkit-padding-start: 25px;
+      }
+      ul li {
+        padding-left: 10px;
+      }
+      ul.minimal {
+        list-style: none;
+        padding: 0;
+      }
+      ul.minimal li {
+        padding-left: 0;
+      }
+      ul.two-column {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 28px;
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 28px;
+        column-gap: 28px;
+      }
+      ul.two-column li {
+        padding-left: 0;
+      }
 
-        .longline {
-            width: 90%;
-            margin: auto;
-            margin-top: 5px;
-            margin-bottom: 8px;
-            border-top: 1px solid rgba(0, 0, 0, 0.65);
-        }
+      .longline {
+        width: 90%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        border-top: 1px solid rgba(0, 0, 0, 0.65);
+      }
 
-        .shortline {
-            width: 190px;
-            margin: auto;
-            margin-top: 3px;
-            margin-bottom: 4px;
-            border-top: 1px solid rgba(0, 0, 0, 0.45);
-        }
+      .shortline {
+        width: 190px;
+        margin: auto;
+        margin-top: 3px;
+        margin-bottom: 4px;
+        border-top: 1px solid rgba(0, 0, 0, 0.45);
+      }
 
-        p {
-            margin: 0 0 8px 0;
-            padding: 0 0 0 1.8em;
-        }
+      p {
+        margin: 0 0 8px 0;
+        padding: 0 0 0 1.8em;
+      }
 
-        header {
-            text-align: center;
-        }
+      header {
+        text-align: center;
+      }
 
-        .title {
-            text-align: center;
-        }
+      .title {
+        text-align: center;
+      }
 
-        .container {
-            margin: auto;
-            margin-top: 0px;
-            margin-bottom: 18px;
-        }
+      .container {
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 18px;
+      }
 
-        .about-row {
-            text-align: center;
-            margin-bottom: 5px; }
-            .about-row .fa {
-                font-size: 14px;
-                width: 12px;
-                margin-left: 5px;
-                margin-right: 5px;
-                text-align: center;
-                vertical-align: middle; }
-            .about-row .fa.fa-map-marker {
-                font-size: 16px; }
-            .about-row .fa.fa-mobile {
-                font-size: 18px; }
-            .about-row .fa.fa-envelope-o {
-                font-size: 12px; }
-            .about-row .fa.fa-desktop {
-                font-size: 11px; }
-            .about-row .fa.fa-external-link {
-                width: auto;
-                font-size: inherit;
-                vertical-align: text-top; }
-          .about-row .info-text {
-                display: inline-block;
-                vertical-align: middle;
-        }
+      .about-row {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .about-row .fa {
+        font-size: 14px;
+        width: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .about-row .fa.fa-map-marker {
+        font-size: 16px;
+      }
+      .about-row .fa.fa-mobile {
+        font-size: 18px;
+      }
+      .about-row .fa.fa-envelope-o {
+        font-size: 12px;
+      }
+      .about-row .fa.fa-desktop {
+        font-size: 11px;
+      }
+      .about-row .fa.fa-external-link {
+        width: auto;
+        font-size: inherit;
+        vertical-align: text-top;
+      }
+      .about-row .info-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-        .skill-row {
-            margin-bottom: 15px;
-            text-align: center;
-        }
+      .skill-row {
+        margin-bottom: 15px;
+        text-align: center;
+      }
 
-        .skill-group {
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 7px;
-        }
+      .skill-group {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 7px;
+      }
 
-        .content {
-            width: 640px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            overflow: auto;
-        }
+      .content {
+        width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        overflow: auto;
+      }
 
-        .content .info {
-            display: inline-block;
-            float: left;
-        }
+      .content .info {
+        display: inline-block;
+        float: left;
+      }
 
-        .content .date {
-            display: inline-block;
-            float: right;
-            text-align: right;
-        }
-        </style>
-	</head>
-	<body>
-		<main class="page">
+      .content .date {
+        display: inline-block;
+        float: right;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="container">
+        <h1>Aleksa Tešić</h1>
+        <div class="about-row">
+          <i class="fa fa-map-marker"></i>
+          <div class="info-text">Belgrade, Serbia</div>
 
-			<header class="container">
-			    <h1>Aleksa Tešić</h1>
-                <div class="about-row">
-                    <i class="fa fa-map-marker"></i>
-                    <div class="info-text">Belgrade, Serbia</div>
+          <i class="fa fa-envelope-o"></i>
+          <div class="info-text">aleksatesicteske@gmail.com</div>
 
-                    <i class="fa fa-envelope-o"></i>
-                    <div class="info-text">aleksatesicteske@gmail.com</div>
+          <i class="fa fa-mobile"></i>
+          <div class="info-text">(+381) 60 424 37 69</div>
 
-                    <i class="fa fa-mobile"></i>
-                    <div class="info-text">(+381) 60 424 37 69</div>
+          <i class="fa fa-github"></i>
+          <div class="info-text">
+            <a href="https://github.com/Imafikus">github.com/Imafikus</a>
+          </div>
+        </div>
+      </header>
 
-                    <i class="fa fa-github"></i>
-                    <div class="info-text"><a href="https://github.com/Imafikus">github.com/Imafikus</a> </div>
-                </div>
-			</header>
+      <div class="container">
+        <h3 class="title">About</h3>
+        <div class="longline"></div>
 
+        <div class="content">
+          <div class="info">
+            <p>
+              Software engineer experienced in building and maintaining
+              everything from CI/CD pipelines and deployments to application frontends.
+              Always programming something.
+            </p>
+            <p>
+              Record collector and Warhammer enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <div class="container">
-                <h3 class="title">About</h3>
-                <div class="longline"></div>
+      <div class="container">
+        <h3 class="title">Skills</h3>
+        <div class="longline"></div>
 
-                <div class="content">
-                    <div class="info">
-                        <p>Software engineer experienced in building and maintaining microservice oriented projects. Always programming something. Currently mostly interested in DevOps.</p> 
-                    </div>
-                </div>
+        <div class="skill-row">
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Actively using now</h4>
+              <div class="shortline"></div>
             </div>
+            <ul class="minimal">
+              <li>Python</li>
+              <li>TS / JS</li>
+              <li>React + Tailwind</li>
+              <li>Bash</li>
+              <li>Terraform</li>
+              <li>GCP</li>
+            </ul>
+          </div>
 
-            <div class="container">
-				<h3 class="title">Skills</h3>
-				<div class="longline"></div>
-
-				<div class="skill-row">
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Actively using now</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>Python</li>
-                            <li>TS / JS</li>
-                            <li>React</li>
-                            <li>Ansible</li>
-                            <li>MongoDB</li>
-                            <li>Bash</li>
-                        </ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Currently learning</h4>
-							<div class="shortline"></div>
-                        </div>
-                        <ul class="minimal">
-                            <li>Terraform</li>
-							<li>GCP</li>                            
-						</ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Had some experience</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>C</li>
-							<li>C++</li>                            
-							<li>Java</li>
-                            <li>Haskell</li>
-                            <li>R</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="skill-row">
-
-                    <div class="skill-group">
-						<div class="subtitle">
-							<h4>Actively used before</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>Node + Express</li>
-                            <li>Postgres</li>
-                        </ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Collaboration</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>Git</li>
-                            <li>Jira</li>
-							<li>Confluence</li>
-						</ul>
-					</div>
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Spoken Languages</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-							<li>Serbian <em>(Native speaker)</em></li>
-							<li>English <em>(Excellent)</em></li>
-							<li>German <em>(Basic)</em></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-            <div class="container">
-                <h3 class="title">Education</h3>
-                <div class="longline"></div>
-
-                <div class="content">
-                    <div class="info">
-                        <b>University of Belgrade, Faculty of Mathematics</b>
-                        <p>Department of Computer Science - Informatics BSc, GPA: 8.50/10 </p>
-                    </div>
-                    <div class="date">
-                        2017 – present
-                    </div>
-                </div>
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Currently learning</h4>
+              <div class="shortline"></div>
             </div>
+            <ul class="minimal">
+              <li>K8s</li>
+              <li>Helm</li>
+              <li>Project Management</li>
+            </ul>
+          </div>
 
-            <div class="container">
-				<h3 class="title">Work Experience</h3>
-				<div class="longline"></div>
-                
-                <div class="content">
-                    <div class="info">
-                        <b>Itekako</b> 
-                        <p>Junior Devops Engineer (Ansible, linux administration, deployments...)</p>
-                    </div>
-                    <div class="date">
-                        September 2020 – present
-                    </div>
-                </div>
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Had some experience</h4>
+              <div class="shortline"></div>
+            </div>
+            <ul class="minimal">
+              <li>C</li>
+              <li>C++</li>
+              <li>Java</li>
+              <li>Haskell</li>
+              <li>R</li>
+            </ul>
+          </div>
+        </div>
 
-                <div class="content">
-                    <div class="info">
-                        <b>Penta Fintech</b> 
-                        <p>Junior Backend Engineer (Node + Express, Postgres, Typescript)</p>
-                    </div>
-                    <div class="date">
-                        March 2019 – August 2020
-                    </div>
-                </div>
-                <div class="content">                    
-                    <div class="info">
-                        <b>Upwork / Freelancing</b> 
-                        <p>Individual development work, from planning to QA. Mostly in Python.</p>
-                    </div>
-                    <div class="date">
-                        December 2017 – March 2019
-                    </div>
-                </div>   
-                <div class="content">                    
-                    <div class="info">
-                            <b>Junior Associate in Petnica</b>
-                            <p>Junior Associate on Computer Science and STEM departments in IS Petnica.</p>
-                        </div>
-                        <div class="date">
-                            2017 - present
-                        </div>
-                </div>
-			</div>
-			<div class="container">
-				<h3 class="title">Selected Projects</h3>
-				<div class="longline"></div>
+        <div class="skill-row">
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Actively used before</h4>
+              <div class="shortline"></div>
+            </div>
+            <ul class="minimal">
+              <li>Node + Express</li>
+              <li>Postgres</li>
+              <li>MongoDB</li>
+              <li>Ansible</li>
+            </ul>
+          </div>
 
-                <div class="content">
-                    <div class="info">
-                        <b>Notify Me</b> (Python, React, Selenium Scraper, Microservices)
-                        <p>Monitors web pages for you and sends you an email if the page has changed. (Can be shown if requested, repos are private). <br>
-                            Flask backend, React front, 4 dockerized microservices, Selenium scraper. CI / CD via GCP.</p>
-                        <p><b><a href= "https://notify-me.rs/" ><u>notify-me.rs</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>Chat System</b> (React, Node + Express, Socket.io, Typescript)
-                        <p> Simple real-time chat app which supports groups. Chat history is stored in memory. Made as a part of Cmputer Networks course on faculty.</p>
-                        <p><b><a href= "https://github.com/Imafikus/2020_Chat-System" ><u>Github Link</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>Vehicle autopilot using fuzzy controllers and metaheuristics</b> (Python, Genetic Algorithms, Fuzzy Systems)
-                        <p>Optimization of the fuzzy parameters for the fuzzy system. Fuzzy system was controlling the vehicle, and the goal was to improve the controls via GA.
-                        </p>
-                        <p><b><a href= "https://github.com/Imafikus/vehicle-autopilot-using-fuzzy-logic-controllers-and-metaheuristics" ><u>Github Link</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>GitHub Network</b> (Python, Web Scraping)
-                        <p>Program which maps my GitHub network and makes a nice image out of it. 
-                            <br>Made it for fun.
-                        </p>
-                        <p><b><a href= "https://github.com/Imafikus/github-network" ><u>Github Link</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>Music Fractals</b> (Python, DSP)
-                        <p>Program which distorts Sieprinski triangles based on the amplitude of the given signal. 
-                            <br>Made for geometry project on faculty.
-                        </p>
-                        <p><b><a href= "https://github.com/Imafikus/music-fractals" ><u>Github Link</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>Google Form generator</b> (Python)
-                        <p>Created a language which enables you to make a Google Form from a specific file.
-                            <br>Made for TEH department in Petnica.
-                        </p>
-                        <p><b><a href= "https://github.com/Imafikus/anketiranje_no_credentials" ><u>Github Link</u></a></b></p>
-                    </div>
-                    <div class="info">
-                        <b>Other projects are also located on my GitHub page, altough not all of them are public.</b>
-                    </div>
-                </div>
-			</div>
-		</main>
-	</body>
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Collaboration</h4>
+              <div class="shortline"></div>
+            </div>
+            <ul class="minimal">
+              <li>Git</li>
+              <li>Jira</li>
+              <li>Confluence</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="subtitle">
+              <h4>Spoken Languages</h4>
+              <div class="shortline"></div>
+            </div>
+            <ul class="minimal">
+              <li>Serbian <em>(Native speaker)</em></li>
+              <li>English <em>(Fluent)</em></li>
+              <li>German <em>(Basic)</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h3 class="title">Work Experience</h3>
+        <div class="longline"></div>
+
+        <div class="content">
+          <div class="info">
+            <b>Connect the Dots</b>
+            <p>
+              Devops Engineer (Terrafom, K8s, GCP, Github Actions).
+            </p>
+          </div>
+          <div class="date">September 2021 – present</div>
+        </div>
+        
+        <div class="content">
+          <div class="info">
+            <b>Itekako</b>
+            <p>
+              Junior Devops Engineer (Ansible, linux administration,
+              deployments...).
+            </p>
+          </div>
+          <div class="date">September 2020 – June 2021</div>
+        </div>
+
+        <div class="content">
+          <div class="info">
+            <b>Penta Fintech</b>
+            <p>
+              Junior Backend Engineer (Node + Express, Postgres, Typescript).
+            </p>
+          </div>
+          <div class="date">March 2019 – August 2020</div>
+        </div>
+        <div class="content">
+          <div class="info">
+            <b>Upwork / Freelancing</b>
+            <p>
+              Individual development work, from planning to QA. Mostly in
+              Python.
+            </p>
+          </div>
+          <div class="date">December 2017 – March 2019</div>
+        </div>
+        <div class="content">
+          <div class="info">
+            <b>Associate in Petnica</b>
+            <p>
+              Associate on Computer Science and STEM departments in IS
+              Petnica.
+            </p>
+          </div>
+          <div class="date">2017 - present</div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <h3 class="title">Education</h3>
+        <div class="longline"></div>
+
+        <div class="content">
+          <div class="info">
+            <b>University of Belgrade, Faculty of Mathematics</b>
+            <p>
+              Department of Computer Science - Informatics BSc
+            </p>
+          </div>
+          <div class="date">2017 – 2021</div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <h3 class="title">Selected Projects</h3>
+        <div class="longline"></div>
+
+        <div class="content">
+          <div class="info">
+            <b>Notify Me</b> (Python, React, Selenium Scraper, Microservices)
+            <p>
+              Monitors web pages for you and sends you a notification if the page has changed.<br />
+            </p>
+            <p>
+              <b
+                ><a href="https://notify-me.rs/"><u>notify-me.rs</u></a></b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <b>Random Github</b> (Python, React)
+            <p>
+              Random github comments every day.<br />
+            </p>
+            <p>
+              <b
+                ><a href="https://randomgithub.com/"><u>randomgithub.com</u></a></b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <b>Chat System</b> (React, Node + Express, Socket.io, Typescript)
+            <p>
+              Simple real-time chat app which supports groups. Chat history is
+              stored in memory. Made as a part of Computer Networks course on
+              faculty.
+            </p>
+            <p>
+              <b
+                ><a href="https://github.com/Imafikus/2020_Chat-System"
+                  ><u>Github Link</u></a
+                ></b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <b>Vehicle autopilot using fuzzy controllers and metaheuristics</b>
+            (Python, Genetic Algorithms, Fuzzy Systems)
+            <p>
+              Optimization of the fuzzy parameters for the fuzzy system. Fuzzy
+              system was controlling the vehicle, and the goal was to improve
+              the controls via GA.
+            </p>
+            <p>
+              <b
+                ><a
+                  href="https://github.com/Imafikus/vehicle-autopilot-using-fuzzy-logic-controllers-and-metaheuristics"
+                  ><u>Github Link</u></a
+                ></b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <b>Google Form generator</b> (Python)
+            <p>
+              Created a language which enables you to make a Google Form from a
+              specific file. <br />Made for TEH department in Petnica.
+            </p>
+            <p>
+              <b
+                ><a
+                  href="https://github.com/Imafikus/anketiranje_no_credentials"
+                  ><u>Github Link</u></a
+                ></b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <b
+              >Other projects are also located on my GitHub page, altough not
+              all of them are public.</b
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
