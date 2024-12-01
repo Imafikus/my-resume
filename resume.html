@@ -103,7 +103,6 @@
 
       h1,
       h2,
-      h3,
       h4,
       h6 {
         text-transform: uppercase;
@@ -331,7 +330,7 @@
       </header>
 
       <div class="container">
-        <h3 class="title">About</h3>
+        <h2 class="title">About</h2>
         <div class="longline"></div>
 
         <div class="content">
@@ -348,69 +347,75 @@
           </div>
         </div>
       </div>
-
       <div class="container">
-        <h3 class="title">Skills</h3>
-        <div class="longline"></div>
-            <div class="content">
-              <div class="info">
-                <p>
-                  <b>Programming</b>: Go, TypeScript, Python, Flask, Selenium, React, Tailwind, Node
-                </p>
-                <p>
-                  <b>CI / CD & Cloud</b>: K8s, Helm, GCP, Bash, Github Actions, Ansible, Docker, Jenkins, Terraform, 
-                </p>
-                <p>
-                  <b>Databases</b>: Postgres, MongoDB. InfluxDB
-                </p>
-                <p>
-                  <b>Other</b>: Grafana, Prometheus, Git, RabbitMQ, Caddy, Nginx
-                </p>
-              </div>
-            </div>
-            
-        </div>
-
-      <div class="container">
-        <h3 class="title">Work Experience</h3>
+        <h2 class="title">Work Experience</h2>
         <div class="longline"></div>
 
         <div class="content">
           <div class="info">
-            <div class="description">
-              <b>Software Engineer - Microsoft (April 2024 – present)</b>
-            </div>
+            <h3><b>Software Engineer - Microsoft (April 2024 – present)</b></h3>
             <p>
-              Part of the WALI team in Microsoft. Responsible for the smart suggestion and writing assistance features in various Microsoft products such as Outlook, Word and Teams. We are working on a SDK that other teams within Microsoft can use to easily provide 
-              smart assistance capabilities to their users in a unified way.
-            </p>
-            <p>
-              Currently leading 6 integrations of our SDK across various Microsoft products. 
-              This means that I'm responsible for any blockers that might arise during the integration process, as well making sure that integrations follow our best practices and planned timelines.
-              Previous responsibilites included working on improving our CI / CD pipelines in order to reduce build times.
+              <ul>
+                <li>Leading WALI team's writing assistance features integration across Microsoft products (Outlook, Word, Teams)</li>
+                <li>Managing SDK integrations for 6 different product teams, ensuring best practices and timelines</li>
+                <li>Optimized CI/CD pipelines to improve build performance</li>
+              </ul>
             </p>
           
             <p>
               <b
-                ><a href="https://www.microsoft.com/en-rs/mdcs" target="_blank"><u>Microsoft Development Center Serbia</u></a></b
+                ><a href="https://www.microsoft.com/en-rs/mdcs" target="_blank"><u>MDCS</u></a></b
               >
             </p>
           </div>
         </div>
         <div class="content">
           <div class="info">
-            <div class="description">
-              SRE (until October 2022) & Software Engineer - Tenderly (March 2022 – November 2023)</b>
-            </div>
+              <h3><b>Co-Founder - Notify Me (October 2018 – present)</b></h3>
+          <p>
+            <ul>
+              <li>Built and launched website monitoring SaaS product serving 4,000+ users with 1.7k monthly visitors</li>
+              <li>Developed full-stack application including payment system integration from scratch</li>
+              <li>Migrated infrastructure from GCP to self-managed Kubernetes cluster on Hetzner with < 1h downtime</li>
+              <li>Architected microservice-based system (9 services) using MongoDB, RabbitMQ, Prometheus and Grafana</li>
+              <li>Achieved 2-minute deployment pipeline from commit to production</li>
+              <li><b>Currently working on this product with 2 other people in our spare time</b></li>
+            </ul>
+          </p>
+          <p>
+            <b><a href="https://notify-me.rs/" target="_blank"><u>notify-me.rs</u></a></b>
+          </p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="info">
+            <h3><b>Board Member at Petnica Science Center (September 2023 – present)</b></h3>
             <p>
-              I was responsible for the internal tooling and CI / CD setup of the whole company. My main responsibilites included 
-              designing and extending custom config system used in the whole backend codebase. I created and maintained in-house developed CLI which enabled us to <b>ship code from our local machines to production in less than 10 minutes</b>.
+            <ul>
+              <li>Leading STEM department and serving on PSC board (volunteer position)</li>
+              <li>Managing team of 15 assistants across 3 different courses, organizing lectures and workshops for high school students</li>
+              <li>Responsible for department budgeting, scheduling, and curriculum development</li>
+              <li>Contributing to strategic planning and stakeholder negotiations with sponsors and government officials</li>
+              <li><b>This is a volunteer position that I do in my spare time.</b></li>
+            </ul>
+          </p>
+            <p>
+              <b><a href="https://petnica.rs/" target="_blank"><u>petnica.rs</u></a></b>
             </p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="info">
+              <h3><b>SRE & Software Engineer - Tenderly (March 2022 – November 2023)</b></h3>
             <p>
-              Maintained and extended CI / CD pipeline, ensuring that code quality checks are in place and that our workflows can adjust to growing number of engineers and environments, 
-              since our engineering headcount doubled in the span of 6 months and we moved from having one k8s cluster to having 3 different ones.
-            </p>
-            <p>
+            <ul>
+              <li>Led internal tooling development and CI/CD infrastructure for entire company</li>
+              <li>Designed and extended custom configuration system for backend codebase</li>
+              <li>Built and maintained in-house CLI tool reducing deployment time to < 10 minutes </li>
+              <li>Scaled CI/CD pipeline to support 3 Kubernetes clusters and 2x engineering team growth</li>
+              <li>Developed microservices that caught regressions on our main pipeline</li>
+            </ul>
+          </p>
               <b
                 ><a href="https://tenderly.co" target="_blank"><u>tenderly.co</u></a></b
               >
@@ -419,64 +424,15 @@
         </div>
         <div class="content">
           <div class="info">
-            <div class="description">
-              <b>Notify Me - Co-Founder (October 2018 – present)</b>
-            </div>
+            <h3><b>Devops Engineer - Connect the Dots (September 2021 – March 2022)</b></h3>
             <p>
-              Notify Me is a simple website tracking & monitoring tool. It enables user to easily track changes on the sites that are important to them and to get those changes delivered in an easy-to-read format directly in their inbox. 
-              We currently have around 4000 users and around 1.7k monthly visitors.
-            </p>
-            <p>
-              Developed the first version of the site and integrated payment system, completely on my own. Talked with users in order to get feedback and iterate on the product based on it. 
-              <b>Currently working on this project with 2 of my friends in our spare time.</b>
-            </p>
-            <p>
-              App is hosted on a self managed k8s cluster running on Hetzner. It was previously hosted on GCP, but due to the high costs we decided to move to Hetzner. <b>Downtime because of the migration was less than 1 hour</b>.
-              System is monitored via Prometheus and Grafana and our time to production is about 2 minutes, depending on how long the image build takes. Whole system is microservice based with 9 microservices running in total. Communication between 
-              them is done via RabbitMQ. MongoDB is used as a database.
-            </p>
-            <p>
-              <b
-                ><a href="https://notify-me.rs/" target="_blank"><u>notify-me.rs</u></a></b
-              >
-            </p>
-          </div>
-        </div>
-        <div class="content">
-          <div class="info">
-            <div class="description">
-            <b>Board Member at Petnica Science Center (September 2017 – present)</b>
-            </div>
-            <p>
-              Currently wearing two hats - I'm a head of a STEM department and a member of the board of the PSC.
-            </p>
-            
-            <p>As a department head my main responsibilites are organizing lectures, seminars and assistants in order to provide 
-              a fun and interactive learning experience for highschoolers that are interested in STEM sciences. This includes creating schedules, 
-              budgeting and organizing a team of around 15 assistants throughout the whole year and accross three different courses.</p>
-            
-            <p>
-              As a board member I'm involved in future planning for the PSC as well as in negotiations with the potential sponsors and partners as well as the government officials. Additionally, 
-              I'm sometimes helping in day-to-day operations of the PSC depending on what the current needs are.
-            </p> 
-            <p><b>This is a volunteer position that I do in my spare time.</b></p>
-            <p>
-              <b><a href="https://petnica.rs/" target="_blank"><u>petnica.rs</u></a></b>
-            </p>
-          </div>
-        </div>
-        <div class="content">
-          <div class="info">
-            <div class="description">
-            <b>Devops Engineer - Connect the Dots (September 2021 – March 2022)</b>
-            </div>
-            <p>
-              Worked on migration from docker based setup to GKE. 
-              Integrated tracing across all microservices in order to pinpoint performance pain points.
-              Implemented new and improved existing CI / CD Github Actions pipelines. 
-              Deployed and improved existing IaC setup via Terraform.
-            </p>
-
+            <ul>
+              <li>Led migration from Docker to Google Kubernetes Engine (GKE) infrastructure</li>
+              <li>Implemented distributed tracing across microservices to optimize performance</li>
+              <li>Developed and enhanced CI/CD pipelines using GitHub Actions</li>
+              <li>Managed Infrastructure as Code (IaC) deployments with Terraform</li>
+            </ul>
+          </p>
             <p>
               <b
                 ><a href="https://www.ctd.ai/" target="_blank"><u>ctd.ai</u></a></b
@@ -487,18 +443,16 @@
         <div class="content">
           <div class="info">
             <div class="description">
-              <b>Junior Devops Engineer - Itekako (September 2020 – June 2021)</b>
+              <h3><b>Junior Devops Engineer - Itekako (September 2020 – June 2021)</b></h3>
             </div>
             <p>
-              Worked on various services for different customers.
-              Most of the work was done on bare metal machines which were fully set up via Ansible while local development used Vagrant. 
-              Usual workflow included setting up a new machine, deploying the app and setting up monitoring and alerting 
-              for it as well as creating fully automated CI / CD pipelines.
-            </p>
-            <p>
-              Apart from that, various smaller tasks
-              were done via mostly bash and / or Python scripts. Part of the job also included technical support for the development team of Itekako.
-            </p>
+            <ul>
+              <li>Deployed and managed bare metal infrastructure using Ansible and Vagrant for multiple clients</li>
+              <li>Implemented automated CI/CD pipelines and monitoring solutions for client applications</li>
+              <li>Developed automation scripts using Bash and Python to streamline operations</li>
+              <li>Provided technical support and infrastructure guidance to development teams</li>
+            </ul>
+          </p>
 
             <p>
               <b><a href="https://itekako.com/" target="_blank"><u>itekako.com</u></a></b>
@@ -508,11 +462,15 @@
         <div class="content">
           <div class="info">
             <div class="description">
-              <b>Junior Backend Engineer - Penta (now Qonto) (March 2019 – August 2020)</b>
+              <h3><b>Junior Backend Engineer - Penta (now Qonto) (March 2019 – August 2020)</b></h3>
             </div>
             <p>
-              Main part of the job included implementing various CRUD endpoints and integrating with various third party services. 
-              Additionally, I was actively refactoring old codebase efrom ES5 to ES6 TypeScript and breaking down monolith based code into smaller services. 
+              <ul>
+                <li>Implemented CRUD endpoints and integrated third-party service APIs</li>
+                <li>Led migration from ES5 to ES6 TypeScript codebase</li>
+                <li>Decomposed monolithic architecture into microservices</li>
+                <li>Developed and maintained backend infrastructure</li>
+              </ul>
             </p>
 
             <p>
@@ -523,7 +481,7 @@
       </div>
       
       <div class="container">
-        <h3 class="title">Education</h3>
+        <h2 class="title">Education</h2>
         <div class="longline"></div>
         
         <div class="content">
